@@ -17,8 +17,7 @@ function VideoPage({video: {embedUrl, title, views, upvotes, downvotes, comments
     const commentCards = filteredComments.map(comment => < Comment key={comment.id} user ={comment.user} comment ={comment.comment} updateComments ={updateCommentsArray} />)
 
     function updateCommentsArray(comment){
-        debugger
-        const newCommentsArray = comments.filter((comment)=> comment.comment !== comment)
+        const newCommentsArray = comments.filter((c)=> c.comment !== comment)
         console.log(newCommentsArray)
         setStateComments(newCommentsArray)
 
